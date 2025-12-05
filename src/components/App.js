@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Layout";
 import Women from "./Women";
 import Items from "./Items";
-import SubCategory from "./SubCategory";
+
 
 function App() {
   return (
