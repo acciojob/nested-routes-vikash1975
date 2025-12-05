@@ -1,13 +1,21 @@
-
 import React from "react";
-import './../styles/App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const App = () => {
+import Home from "./Layout";
+import Women from "./Women";
+import Items from "./Items";
+import SubCategory from "./SubCategory";
+
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/women" component={Women} />
+        <Route exact path="/women/:subCategoryName" component={Items} />
+      </Switch>
+    </Router>
+  );
 }
 
-export default App
+export default App;
